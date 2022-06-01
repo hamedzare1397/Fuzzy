@@ -1,0 +1,3 @@
+
+class TNorm:
+    pass;

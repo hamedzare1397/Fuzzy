@@ -1,0 +1,3 @@
+
+class Defuzzifier:
+    pass
