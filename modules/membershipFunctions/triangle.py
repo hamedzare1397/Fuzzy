@@ -1,21 +1,19 @@
 
 import math
 import numpy as np
-from packages.membershipFunctions.membership import Membership
+from modules.membershipFunctions.membership import Membership
 
 
-class Trapezoidal(Membership):
+class Triangle(Membership):
     a=None
     b=None
     c=None
-    d=None
 
-    def __init__(self, x,a,b,c,d) -> None:
+    def __init__(self, x,a,b,c) -> None:
         super().__init__(x)
         self.a=a
         self.b=b
         self.c=c
-        self.d=d
 
     def exec(self):
         if self.a<=0:
@@ -24,12 +22,9 @@ class Trapezoidal(Membership):
             return ((self.x-self.a)/(self.b-self.a))
         
         elif self.b<=self.x and self.x<= self.c:
-            return 1
-            
-        elif self.c<=self.x and self.x<= self.d:
-            return ((self.d-self.x)/(self.d-self.c))
+            return ((self.c-self.x)/(self.c-self.b))
         
-        elif self.d<=self.x:
+        elif self.c<=self.x:
             return 0
         return None
     

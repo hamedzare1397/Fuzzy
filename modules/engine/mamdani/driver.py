@@ -1,5 +1,5 @@
-from packages.engine.inferenceSystemEngine import IInferenceEnginer
-from packages.engine.mamdani.defuzzifiers.defuzzifier import Defuzzifier
+from modules.engine.inferenceSystemEngine import IInferenceEnginer
+from modules.engine.mamdani.defuzzifiers.defuzzifier import Defuzzifier
 
 
 class MamdaniInferenceEnginer(IInferenceEnginer):
@@ -12,5 +12,5 @@ class MamdaniInferenceEnginer(IInferenceEnginer):
         self.defuzzifier=defuzzifier
         return None;
 
-    def handle():
-        pass
+    def handle(self,data):
+        print('data')

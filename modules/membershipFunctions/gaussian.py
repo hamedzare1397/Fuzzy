@@ -1,7 +1,7 @@
 
 import math
 import numpy as np
-from packages.membershipFunctions.membership import Membership
+from modules.membershipFunctions.membership import Membership
 
 
 class Guassian(Membership):
