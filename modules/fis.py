@@ -7,6 +7,7 @@ from modules.engine.mamdani.driver import MamdaniInferenceEnginer
 from modules.rules.rule import IRule as Rule
 
 class FIS:
+    name=None
     rules=None
     inputs=None
     fuzzyInput:None
