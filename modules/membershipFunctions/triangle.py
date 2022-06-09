@@ -16,7 +16,7 @@ class Triangle(Membership):
         self.c=c
 
     def exec(self):
-        if self.a<=0:
+        if self.a<0:
             return 0;
         elif self.a<=self.x and self.x<= self.b:
             return ((self.x-self.a)/(self.b-self.a))
@@ -26,5 +26,5 @@ class Triangle(Membership):
         
         elif self.c<=self.x:
             return 0
-        return None
+        return 0
     
