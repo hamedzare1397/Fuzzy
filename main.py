@@ -37,17 +37,13 @@ if(__name__=='__main__'):
     #end select data for test
 
 
-
-
     #start create fazzi roules => 3
     dimension_points = [[0,0,0.5],[0,0.5,1],[0.5,1,1]]
     roles_label = np.zeros((3,3,3,3,3,3,3,3,3,3,3,3,3))
     roles_data = np.zeros((3,3,3,3,3,3,3,3,3,3,3,3,3))
-    dimentions =14
-    s=(Triangle(copy_data["x10"][0],*dimension_points[2]).exec())
-
+    #s=(Triangle(copy_data["x10"][0],*dimension_points[2]).exec())
     for data_index in train_index:
-        max = -1
+        max = 0
         for x1 in range(3):
             for x2 in range(3):
                 for x3 in range(3):
@@ -83,7 +79,7 @@ if(__name__=='__main__'):
                                                                     roles_data[x1][x2][x3][x4][x5][x6][x7][x8][x9][x10][x11][x12][x13] = min
 
 
-    print(roles)
+    print(roles_label)
     #end create fazzi
 
     #mmd=mmdn()

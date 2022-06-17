@@ -16,13 +16,13 @@ class Triangle(Membership):
         self.c=c
 
     def exec(self):
-        if self.a<0:
+        if self.a>self.x:
             return 0;
         elif self.a<=self.x and self.x<= self.b:
-            return ((self.x-self.a)/(self.b-self.a))
+            return np.divide((np.subtract(self.x,self.a)),(np.subtract(self.b,self.a)))
         
         elif self.b<=self.x and self.x<= self.c:
-            return ((self.c-self.x)/(self.c-self.b))
+            return np.divide(np.subtract(self.c,self.x),np.subtract(self.c,self.b))
         
         elif self.c<=self.x:
             return 0
